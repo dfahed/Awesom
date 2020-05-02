@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func changeImage(_ sender: Any) {
+        if imageView.image == #imageLiteral(resourceName: "Photo1") {
+        imageView.image = #imageLiteral(resourceName: "Photo2")
+        }
+        else {
+            imageView.image = #imageLiteral(resourceName: "Photo1")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }
